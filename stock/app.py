@@ -7,7 +7,7 @@ def main():
     return "You hit root.  You should try /stock/<symbol>"
 
 @app.route("/stock/<symbol>")
-def weather(symbol):
+def stock(symbol):
     return "Stock report for " + symbol + ": " + random_report()
 
 def random_report():

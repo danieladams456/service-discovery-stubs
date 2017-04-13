@@ -19,7 +19,7 @@ def main():
 
 @app.route("/console")
 def console():
-    return "Welcome to the console!\nYou can either try /console/weather/<city> or /console/stock/<symbol>"
+    return "Welcome to the console!\nYou can either try /console/weather/{city} or /console/stock/{symbol}"
 
 @app.route("/console/weather/<city>")
 def weather(city):

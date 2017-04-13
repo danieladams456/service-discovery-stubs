@@ -21,20 +21,12 @@ def main():
 def stock(symbol):
     message =  "Stock report for " + symbol + ": " + random_report()
     if symbol == "extrabacon":
-        message += "<br>" + extra_bacon(symbol)
+        message += "<br>" + 'nope, no circular dependencies here'
     return message
 
 def random_report():
     possibilities = ["Good", "Bad", "Ugly"]
     return random.choice(possibilities)
-
-#get a stock too to showcase service discovery
-def extra_bacon(city):
-    url = BASE_URL + "/weather/" + city
-    logger.info("EXTRABACON Service URL: " + url)
-    r = requests.get(url)
-    message = "Querying EXTRABACON URL " + url + "<br>" + r.text
-    return message
 
 
 if __name__ == "__main__":
